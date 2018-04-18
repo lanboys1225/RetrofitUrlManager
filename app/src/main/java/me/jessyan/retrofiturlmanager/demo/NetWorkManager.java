@@ -64,7 +64,8 @@ public class NetWorkManager {
                 .build();
 
         this.mOneApiService = mRetrofit.create(OneApiService.class);
-        this.mTwoApiService = mRetrofit.create(TwoApiService.class);
+        //Class service = ClassPoolUtils.service(,"me.jessyan.retrofiturlmanager.demo.api.TwoApiService");
+        //this.mTwoApiService = (TwoApiService) mRetrofit.create(service);
         this.mThreeApiService = mRetrofit.create(ThreeApiService.class);
     }
 

@@ -126,7 +126,9 @@ public class RetrofitUrlManager {
 
         Object[] listeners = listenersToArray();
 
-        // 如果有 header,获取 header 中 domainName 所映射的 url,若没有,则检查全局的 BaseUrl,未找到则为null
+        // 如果有 header,获取 header 中 domainName 所映射的 url,若没有,
+        // 则检查全局的 BaseUrl,未找到则为null
+        // 为 null 则使用默认的 baseUrl (初始化 retrofit 时设置的 url)
         if (!TextUtils.isEmpty(domainName)) {
             notifyListener(request, domainName, listeners);
             httpUrl = fetchDomain(domainName);

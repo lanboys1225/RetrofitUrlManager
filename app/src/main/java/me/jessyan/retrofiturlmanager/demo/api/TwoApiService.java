@@ -16,6 +16,7 @@
 package me.jessyan.retrofiturlmanager.demo.api;
 
 import io.reactivex.Observable;
+import me.jessyan.retrofiturlmanager.annotation.AllHeaders;
 import okhttp3.ResponseBody;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
@@ -31,6 +32,7 @@ import static me.jessyan.retrofiturlmanager.demo.api.Api.GANK_DOMAIN_NAME;
  * <a href="https://github.com/JessYanCoding">Follow me</a>
  * ================================================
  */
+@AllHeaders({DOMAIN_NAME_HEADER + GANK_DOMAIN_NAME})
 public interface TwoApiService {
     //如果不需要多个 BaseUrl, 继续使用初始化时传入 Retrofit 中的默认 BaseUrl, 就不要加上 DOMAIN_NAME_HEADER 这个 Header
     @Headers({DOMAIN_NAME_HEADER + GANK_DOMAIN_NAME})

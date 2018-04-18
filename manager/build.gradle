@@ -27,6 +27,7 @@ android {
 
 dependencies {
     compileOnly 'com.squareup.okhttp3:okhttp:3.10.0'
+    api 'org.javassist:javassist:3.20.0-GA'
 }
 
 apply from: 'bintray.gradle'
